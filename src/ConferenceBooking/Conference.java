@@ -1,6 +1,8 @@
 package ConferenceBooking;
 
+import java.io.PrintWriter;
 import java.util.HashSet;
+import java.util.Iterator;
 import javax.swing.ImageIcon;
 
 public class Conference {
@@ -21,7 +23,14 @@ public class Conference {
             people.add(new Guest("Amy", "javagirl@xyz.com"));
     }}
 
-    public void save(Pr)
+    public void save(PrintWriter pw, String key){
+        Iterator it = people.iterator();
+        while(it.hasNext())
+        {
+             pw.println(key);
+             pw.println(it.next());
+        }
+    }
     
     
     public boolean signup(Guest g){
@@ -35,7 +44,7 @@ public class Conference {
     public boolean remove(Guest g){
         //get the guest and remove
         //.contains to see if guest is in there or not
-       name = g.getName();
+       return true;
     
         
     }
